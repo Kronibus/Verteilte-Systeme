@@ -1,5 +1,5 @@
-package Aufgabe_2;
 
+package Aufgabe_3;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,9 +9,9 @@ import java.io.FileInputStream;
  * @author Sprotte Telefonbuch Programm zum testen von Threads
  *
  */
-public class ServerTelefonbuch {
+public class Telefonbuch {
 
-	private static ServerTelefonbuch buch = new ServerTelefonbuch();
+	private static Telefonbuch buch = new Telefonbuch();
 	public static ArrayList<String> ausgabeName = new ArrayList<String>();
 	public static ArrayList<String> ausgabeNummern = new ArrayList<String>();
 
@@ -53,7 +53,7 @@ public class ServerTelefonbuch {
 				ausgabeNummern=new ArrayList<String>();
 				// ließt per Bufferreader die telefonbuch txt ein und überprüft
 				// ob es das such objekt ist
-				BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("telefonbuch"), "UTF8"));
+				BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("telefonbuch.txt"), "UTF8"));
 				String zeile = null;
 				if (name == null) {
 					boolean found = false;
